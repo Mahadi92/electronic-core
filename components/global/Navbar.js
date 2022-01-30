@@ -40,7 +40,7 @@ const Navbar = () => {
                         </div>
                         <p>Welcome to Complex store!</p>
                     </div>
-                    <div>
+                    <div className={style.top_nav_action_container}>
                         <button>My Account</button>
                         <button>Wish List</button>
                         <button>My Cart</button>
@@ -51,26 +51,25 @@ const Navbar = () => {
 
             {/* Search container  */}
             <div className={style.search_container}>
-                <div>
-                    <Image src="/static/logo.png" alt="logo" width="130" height="80" />
+                <div className={style.search_container_img}>
+                    <Image src="/static/logo.png" alt="logo" width="120" height="80" />
                 </div>
-                <form className={style.search_form}>
-                    <div>
-                        <select name="" id="">
-                            <option value="">item1</option>
-                            <option value="">item2</option>
-                            <option value="">item3</option>
-                            <option value="">item4</option>
-                            <option value="">item5</option>
-                        </select>
-                    </div>
+                <form className={style.search_container_form}>
+                    <select>
+                        <option value="opt1">All categories</option>
+                        <option value="opt2">Option 2</option>
+                        <option value="opt3">Option 3</option>
+                        <option value="opt4">Option 4</option>
+                        <option value="opt5">Option 5</option>
+                    </select>
                     <input type="search" placeholder="Search here..." />
                     <button type="submit">Search</button>
                 </form>
 
-                <div>
+                <div className={style.search_container_cartIco}>
                     <FaShoppingCart />
                     <span>0</span>
+                    <p>Your Cart</p>
                 </div>
 
             </div>

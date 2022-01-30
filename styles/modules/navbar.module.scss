@@ -9,21 +9,123 @@
         background: $dark;
         
         .top_nav_container{
-            @include flex($justify: space-between, $align: center);
-            @extend .container;
-            color: $white;
+          @include flex($wrapper: nowrap, $direction: column,  $justify: center, $align: center);
+          @extend .container;
+          color: $white;
+          padding: .8rem 0;
+          
+          .top_nav_action_container{
+            padding-top: $em;
+          }
+            @media (min-width: $s768){
+                @include flex($justify: space-between, $align: center);
 
+                .top_nav_action_container{
+                  padding-top: 0;
+                }
+              }
+            
             div{
-            @include flex($justify: center, $align: center);
+              @include flex($justify: center, $align: center);
+              
+              select{
+                background: none;
+                border: none;
+                outline: none;
+                color: $white;
+
+                option{
+                  color: $dark;
+                }
+              }
+              p{
+                padding-left: $sm;
+                font-size: .9rem;
+              }
+              button{
+                background: none;
+                outline: none;
+                border: none;
+                color: $white;
+                padding-left: $md;
+                display: inline-block;
+                
+                &:first-child{
+                  padding-left: 0;
+                }
+              }
             }
         }
     }
     .search_container{
         @extend .container;
         @include flex($justify: space-between, $align: center);
+        padding: $sm 0;
 
-        .search_form{
+        .search_container_img{
+          width: 10%;
+        }
+
+        .search_container_form{
             @include flex($justify: center, $align: center);
+            width: 80%;
+
+            select{
+              outline: none;
+              border-left: 1px solid $gray-dark;
+              border-top: 1px solid $gray-dark;
+              border-bottom: 1px solid $gray-dark;
+              border-radius: 0.35rem 0 0 0.35rem;
+              border-right: none;
+              background: $gray;
+              display: block;
+              padding: 0 $sm;
+              width: 15%;
+              height: 2.9rem;
+            }
+
+            input{
+              padding: 0 $sm;
+              width:50%;
+              display: inline-block;
+              height: 2.9rem;
+              border-radius: none;
+              border: 1px solid $gray-dark;
+            }
+            button{
+              display: block;
+              width: 10%;
+              height: 2.9rem;
+              background: $primary;
+              color: $white;
+              border: none;
+              padding: 0 $sm;
+              border-radius: 0 0.35rem 0.35rem 0;
+
+            }
+        }
+        .search_container_cartIco{
+          width: 10%;
+          position: relative;
+          svg{
+            width: 1.3rem;
+            height: 1.3rem;
+            margin: 0 auto;
+          }
+          span{
+            display: block;
+            position: absolute;
+            top: -0.4rem;
+            left: 1.2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
+            background: $primary;
+            border-radius: 100%;
+            color: $white;
+          }
+          
+
         }
     }
 }
