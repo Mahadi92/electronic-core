@@ -1,0 +1,51 @@
+// spacing
+$xs: 0.125rem; //2px
+$em: 0.625rem; // 10px
+$sm: 1rem; //16px
+$md: 2rem; //32px
+$lg: 4rem; //64px
+$xl: 6rem; //96px
+$xxl: 12rem; //192px
+$xxxl: 24rem; //384px
+
+$full: 100%;
+$half: 50%;
+$quarter: 33.33333%;
+
+$vh: 100vh;
+$vw: 100vw;
+
+
+// color
+$primary: #b11e22;
+$primary-light: #fff;
+
+$secondary: #448CCB;
+$secondary-light: #f4f8f9;
+
+$danger: #C4302B;
+$danger-light: #fff;
+
+$success: #62BDB2;
+$success-light: #fff;
+
+$warning: #fff;
+$warning-light: #fff;
+
+$gray: #F6F6F6;
+$gray-dark: #ebebeb;
+$gray-light: #fff;
+
+$white: #fff;
+$dark: #1b252f;
+
+// screens
+$s425: 425px; 
+$s768: 768px; 
+$s1024: 1024px; 
+$s1280: 1280px; 
+$s1366: 1366px; 
+$s1440: 1440px; 
+$s1600: 1600px; 
+$s1920: 1920px;
+$s4k: 2560px;

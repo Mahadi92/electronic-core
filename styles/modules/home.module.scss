@@ -1,0 +1,9 @@
+@import "../global/mixins";
+@import "../global/variables";
+@import "../global/global";
+
+
+.second_card{
+    @extend .container;
+    @include grid($column: 1fr 1fr 1fr, $gap: 2rem,)
+}

@@ -1,0 +1,34 @@
+@import "../global/mixins";
+@import "../global/variables";
+@import "../global/global";
+
+
+.controller{
+    @include flex($justify: space-between, $align: center);
+    
+    button{
+        background: none;
+        border: none;
+        display: block;
+
+        svg{
+            vertical-align: middle;
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+    span{
+        display: block;
+        color: $gray-dark;
+    }
+}
+
+.left_div{
+    width: 25%;
+
+    .title_div{
+        @include flex($justify: space-between, $align: center);
+        @extend .border-b;
+    }
+}
+

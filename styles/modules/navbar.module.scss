@@ -1,0 +1,115 @@
+@import "../global/mixins";
+@import "../global/variables";
+@import "../global/global";
+
+
+.nav_container{
+
+    .top_nav{
+        background: $dark;
+        
+        .top_nav_container{
+            @include flex($justify: space-between, $align: center);
+            @extend .container;
+            color: $white;
+
+            div{
+            @include flex($justify: center, $align: center);
+            }
+        }
+    }
+    .search_container{
+        @extend .container;
+        @include flex($justify: space-between, $align: center);
+
+        .search_form{
+            @include flex($justify: center, $align: center);
+        }
+    }
+}
+
+
+/* Navbar css */
+.navbar{
+    @extend .container;
+    @include flex($justify: center, $align: center)
+}
+
+/* Dropdown Button */
+.dropbtn {
+    padding: $xs $em;
+    // color: $white;
+    text-transform: uppercase;
+
+    @media (min-width: $s1366){
+        padding: 0 $sm;
+    }
+}
+.activeDropBtn{
+    padding: $xs $em;
+    color: $primary;
+    text-transform: uppercase;
+
+    @media (min-width: $s1366){
+        padding: 0 $sm;
+    }
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown_content {
+    width: auto;
+    display: none;  
+    min-width: 250px;
+    z-index: 1;
+  }
+  .dropdown_content-profile {
+    width: auto;
+    display: none;
+    position: absolute;
+    border-radius: $em;
+    right: -$md;
+    background: none;
+    z-index: 1;
+  }
+  /* .dropdown_content-profile-mobile {
+    @apply w-auto hidden absolute rounded-primary left-sm;
+    background: none;
+    z-index: 1;
+  } */
+  
+  .invisibleMargin {
+    width: 250px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown_content a {
+    @apply  p-sm block no-underline;
+    background: none;
+    font-size: 16px;
+  }
+  
+  .dropdown_parent {
+    @apply rounded-sm bg-white shadow-m;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown_content a:hover {
+    background-color: rgba(218, 218, 218, 0.363);
+    @apply rounded-sm text-primary;
+    border-radius: $em;
+    color: $primary;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown_content,
+  .dropdown:hover .dropdown_content-profile {
+    display: block;
+  }

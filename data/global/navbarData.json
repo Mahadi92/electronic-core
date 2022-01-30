@@ -1,0 +1,62 @@
+[
+    {
+        "linkName": "Home",
+        "linkAddress": "/",
+        "linkDropdown": []
+    },
+    {
+        "linkName": "Features",
+        "linkAddress": "/",
+        "linkDropdown": [
+            {
+                "linkName": "Search Domain",
+                "linkAddress": "/domain"
+            },
+            {
+                "linkName": "Transfer Domain",
+                "linkAddress": "/transfer-domain"
+            }
+        ]
+    },
+    {
+        "linkName": "Blog",
+        "linkAddress": "/",
+        "linkDropdown": []
+    },
+    {
+        "linkName": "Pages",
+        "linkAddress": "",
+        "linkDropdown": [
+            {
+                "linkName": "Brands",
+                "linkAddress": "/"
+            },
+            {
+                "linkName": "Faqs",
+                "linkAddress": "/"
+            },
+            {
+                "linkName": "About Us",
+                "linkAddress": "/"
+            },
+            {
+                "linkName": "Privacy Policy",
+                "linkAddress": "/"
+            },
+            {
+                "linkName": "404 Not Found",
+                "linkAddress": "/"
+            }
+        ]
+    },
+    {
+        "linkName": "Contact Us",
+        "linkAddress": "/",
+        "linkDropdown": []
+    },
+    {
+        "linkName": "Find A Store",
+        "linkAddress": "/",
+        "linkDropdown": []
+    }
+]

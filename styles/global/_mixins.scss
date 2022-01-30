@@ -1,0 +1,43 @@
+
+//flexbox
+@mixin flex (
+        $wrapper: nowrap, 
+        $direction: row, 
+        $justify: start, 
+        $align: start
+    ) {
+    display: flex;
+    flex: {
+        wrap: $wrapper;
+        direction: $direction;
+    }
+    justify-content: $justify;
+    align-items: $align;
+    
+}
+
+
+//grid
+@mixin grid(
+        $column: 1fr, 
+        $gap: 1rem,
+        $justify: start, 
+        $align: start 
+    ) {
+    display: grid;
+    grid-template-columns: $column;
+    grid-gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+//for all sort of common background properties
+@mixin bgBoard ($address, $position, $size, $repeat) {
+    background: {
+        image: url($address);
+        position: $position;
+        size: $size;
+        repeat: $repeat;
+    }
+}
