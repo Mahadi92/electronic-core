@@ -20,7 +20,7 @@ const DualSlider = () => {
                 <div>
                     <div>
                         <div>
-                            <Image src="" alt="" />
+                            {/* <Image src="" alt="" /> */}
                         </div>
                         <p>Lorem, ipsum dolor.</p>
                         <div>
