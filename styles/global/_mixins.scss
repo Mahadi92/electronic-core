@@ -1,11 +1,6 @@
 
 //flexbox
-@mixin flex (
-        $wrapper: nowrap, 
-        $direction: row, 
-        $justify: start, 
-        $align: start
-    ) {
+@mixin flex ( $wrapper: nowrap, $direction: row, $justify: start, $align: start) {
     display: flex;
     flex: {
         wrap: $wrapper;
