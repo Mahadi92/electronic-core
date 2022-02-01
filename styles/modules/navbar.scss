@@ -276,6 +276,47 @@
 }
 
 
+.bars{
+    display: none;
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    
+
+    .bar-1, .bar-2, .bar-3{
+        width: 30px;
+        height: 4px;
+        background: #000;
+        border-radius: 4px;
+        display: block;
+        transition: 0.3s ease-out;
+    }
+
+    .bar-2{
+        margin: 6px 0;
+    }
+
+    .active_bar.bar-1{
+        transform: translate(-7px, -5px) rotate(45deg);
+    }
+
+    .active_bar.bar-2{
+        display: none;
+    }
+
+    .active_bar.bar-3{
+        transform: translate(-7px, -9px) rotate(-45deg);
+    }
+
+    @media screen and (max-width: 980px ) {
+        display: block;
+    }
+}
+
+
+
+
 @keyframes growDown {
     0% {
         transform: scaleY(0)

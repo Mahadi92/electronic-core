@@ -1,5 +1,7 @@
 import '../styles/global/globals.css';
 import '/styles/global/global.scss';
+import "/styles/modules/navbar.scss";
+
 import Navbar from "../components/global/Navbar"
 
 

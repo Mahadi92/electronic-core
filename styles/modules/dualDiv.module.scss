@@ -22,13 +22,117 @@
         color: $gray-dark;
     }
 }
+.title_div{
+    @include flex($justify: space-between, $align: center);
+    @extend .border-b;
+}
+.DualSlider_container{
+    display: flex;
+    .left_div{
+        width: 25%;
+    }
+    
+    .right_div{
+        width: 75%;
+        padding-left: $md;
 
-.left_div{
-    width: 25%;
+        .dualSlider_container_content{
+            width:100%;
+            height: auto;
+            border: 2px solid $primary;
+            border-radius: $sm;
+            padding: $lg;
+            position: relative;
+            display: flex;
 
-    .title_div{
-        @include flex($justify: space-between, $align: center);
-        @extend .border-b;
+            
+            .ribbon{
+                position: absolute;
+                top: -33px;
+                left: -60px;
+                transform: rotate(-45deg);
+                display: block;
+                width: 160px;
+                height: 100px;
+                overflow: hidden;
+                                
+                .ribbon_inner_wrap{
+                    position: relative;
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    // background: #000;
+                    
+                    &:after{
+                        content:"";
+                        position: absolute;
+                        top: 38%;
+                        left: 15%;
+                        width: 100%;
+                        height: 100%;
+                        background: $primary;
+                        transform: rotate(-45deg);
+                        border-radius: 0 $sm 0 0;
+                    }
+
+                    .ribbon_text{
+                        display: block;
+                        position: absolute;
+                        top: 45%;
+                        left:45%;
+                        color: $white;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        z-index: 1;
+                    }
+                }
+            }
+            .dualSlider_container_content_img{
+                width: 40%;
+                height: 100%;
+            }
+            .dualSlider_container_content_box{
+                width: 60%;
+
+                .content_box_heading{
+                    font-size: 1.2rem;
+                    color: $dark;
+                    font-weight: 500;
+                    color: $dark;
+                }
+                .content_box_rating{
+                    padding: $em 0;
+                    span svg{
+                        margin-left: 2px;
+                        width: 0.9rem;
+                        height: 0.9rem;
+                        color: #FFC600;
+                    }
+                }
+                .content_box_price{
+                    display: flex;
+                    padding-bottom: $em;
+
+                    h3{
+                        padding-right: $sm;
+                        font-weight: 600;
+                        
+                        &:first-child{
+                            color: $primary;
+                        }
+                        &:last-child{
+                            color: gray;
+                            text-decoration:line-through;
+                            text-decoration-thickness: 2px;
+                        }
+                    }
+                }
+                p{
+                    padding: $em 0;
+                }
+            }
+        }
+
     }
 }
-
