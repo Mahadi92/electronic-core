@@ -56,7 +56,7 @@ const DualSlider = () => {
         <div className={style.DualSlider_container}>
             <div className={style.left_div}>
                 <div className={style.title_div}>
-                    <h2>New Product</h2>
+                    <p>New Product</p>
                     <div className={style.controller}>
                         <button><FiChevronLeft /></button>
                         <span>|</span>
@@ -65,23 +65,49 @@ const DualSlider = () => {
                 </div>
 
                 {/* content */}
-                <div>
+                <div className={style.product_card_container}>
                     {/* card */}
-                    <div>
+                    <div className={style.product_card}>
                         <div>
                             <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
                         </div>
-                        <p>Lorem, ipsum dolor.</p>
+                        <div className={style.product_card_content}>
+                            <p>Lorem, ipsum dolor.</p>
+                            <div>
+                                <p>$100.00</p>
+                                <span>$120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={style.product_card}>
                         <div>
-                            <p>$100.00</p>
-                            <span>$120.00</span>
+                            <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
+                        </div>
+                        <div className={style.product_card_content}>
+                            <p>Lorem, ipsum dolor.</p>
+                            <div>
+                                <p>$100.00</p>
+                                <span>$120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={style.product_card}>
+                        <div>
+                            <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
+                        </div>
+                        <div className={style.product_card_content}>
+                            <p>Lorem, ipsum dolor.</p>
+                            <div>
+                                <p>$100.00</p>
+                                <span>$120.00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={style.right_div}>
                 <div className={style.title_div}>
-                    <h2>Deal Of The Day</h2>
+                    <p>Deal Of The Day</p>
                     <div className={style.controller}>
                         <button id="prevSlide"><FiChevronLeft /></button>
                         <span>|</span>

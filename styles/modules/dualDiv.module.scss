@@ -20,11 +20,14 @@
     span{
         display: block;
         color: $gray-dark;
+        font-weight: 200;
     }
 }
 .title_div{
     @include flex($justify: space-between, $align: center);
     @extend .border-b;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .DualSlider_container{
     display: flex;
@@ -38,6 +41,28 @@
         width: 25%;
         @media (max-width: 1024px){
             width: 100%;
+        }
+
+        .product_card{
+            display: flex;
+
+            .product_card_content{
+                div{
+                    display: flex;
+                    align-items: center;
+                    p{
+                        font-weight: 600;
+                        color: $primary;
+                        padding-right: $em;
+                    }
+                    span{
+                        display: block;
+                        font-size: .9rem;
+                        color: gray;
+                        text-decoration: line-through;
+                    }
+                }
+            }
         }
     }
     
