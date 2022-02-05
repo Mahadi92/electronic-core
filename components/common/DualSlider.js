@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper";
+import dualsliderData from '../../data/home/dualsliderData.json';
 
 
 const DualSlider = () => {
@@ -57,11 +58,6 @@ const DualSlider = () => {
             <div className={style.left_div}>
                 <div className={style.title_div}>
                     <p>New Product</p>
-                    <div className={style.controller}>
-                        <button><FiChevronLeft /></button>
-                        <span>|</span>
-                        <button><FiChevronRight /></button>
-                    </div>
                 </div>
 
                 {/* content */}
@@ -72,7 +68,7 @@ const DualSlider = () => {
                             <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
                         </div>
                         <div className={style.product_card_content}>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Arcu Vitae Imperdiet</p>
                             <div>
                                 <p>$100.00</p>
                                 <span>$120.00</span>
@@ -81,22 +77,10 @@ const DualSlider = () => {
                     </div>
                     <div className={style.product_card}>
                         <div>
-                            <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
+                            <Image src="/static/images/img2.jpg" alt="" width={100} height={100} />
                         </div>
                         <div className={style.product_card_content}>
-                            <p>Lorem, ipsum dolor.</p>
-                            <div>
-                                <p>$100.00</p>
-                                <span>$120.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.product_card}>
-                        <div>
-                            <Image src="/static/images/img1.webp" alt="" width={100} height={100} />
-                        </div>
-                        <div className={style.product_card_content}>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Frankie Sweatshirt</p>
                             <div>
                                 <p>$100.00</p>
                                 <span>$120.00</span>
@@ -132,96 +116,58 @@ const DualSlider = () => {
                         }}
                         modules={[Navigation]}
                         className="mySwiper">
-                        <SwiperSlide>
-                            <div className={style.dualSlider_container_content_slider}>
-                                <div className={style.dualSlider_container_content_img}>
-                                    <img src="/static/images/img1.webp" alt="" />
-                                </div>
-                                <div className={style.dualSlider_container_content_box}>
-                                    <h3 className={style.content_box_heading}>Lorem, ipsum dolor.</h3>
-                                    <div className={style.content_box_rating}>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                    </div>
-                                    <div>
-                                        <div className={style.content_box_price}>
-                                            <h3>$200.00</h3>
-                                            <h3>$234.00</h3>
-                                        </div>
+                        {
+                            dualsliderData.map((data, i) => {
 
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nihil.</p>
+                                const { img, heading, star, currentPrice, oldPrice, paragraph } = data;
+                                return (
+                                    <SwiperSlide key={i}>
+                                        <div className={style.dualSlider_container_content_slider}>
+                                            <div className={style.dualSlider_container_content_img}>
+                                                <img src={img} alt="" />
+                                            </div>
+                                            <div className={style.dualSlider_container_content_box}>
+                                                <h3 className={style.content_box_heading}>{heading}</h3>
+                                                <div className={style.content_box_rating}>
+                                                    <span><BsFillStarFill /></span>
+                                                    <span><BsFillStarFill /></span>
+                                                    <span><BsFillStarFill /></span>
+                                                    <span><BsFillStarFill /></span>
+                                                    <span><BsFillStarFill /></span>
+                                                </div>
+                                                <div>
+                                                    <div className={style.content_box_price}>
+                                                        <h3>{currentPrice}</h3>
+                                                        <h3>{oldPrice}</h3>
+                                                    </div>
 
-                                        <div className={style.content_box_counter}>
+                                                    <p>{paragraph}</p>
 
-                                            <div>
-                                                <span>{days}</span>
-                                                <p>Days</p>
-                                            </div>
-                                            <div>
-                                                <span>{hours}</span>
-                                                <p>HRS</p>
-                                            </div>
-                                            <div>
-                                                <span>{minutes}</span>
-                                                <p>mins</p>
-                                            </div>
-                                            <div>
-                                                <span>{seconds}</span>
-                                                <p>secs</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className={style.dualSlider_container_content_slider}>
-                                <div className={style.dualSlider_container_content_img}>
-                                    <img src="/static/images/img1.webp" alt="" />
-                                </div>
-                                <div className={style.dualSlider_container_content_box}>
-                                    <h3 className={style.content_box_heading}>Lorem, ipsum dolor.</h3>
-                                    <div className={style.content_box_rating}>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                        <span><BsFillStarFill /></span>
-                                    </div>
-                                    <div>
-                                        <div className={style.content_box_price}>
-                                            <h3>$200.00</h3>
-                                            <h3>$234.00</h3>
-                                        </div>
-
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nihil.</p>
-
-                                        <div className={style.content_box_counter}>
-
-                                            <div>
-                                                <span>{days}</span>
-                                                <p>Days</p>
-                                            </div>
-                                            <div>
-                                                <span>{hours}</span>
-                                                <p>HRS</p>
-                                            </div>
-                                            <div>
-                                                <span>{minutes}</span>
-                                                <p>mins</p>
-                                            </div>
-                                            <div>
-                                                <span>{seconds}</span>
-                                                <p>secs</p>
+                                                    <div className={style.content_box_counter}>
+                                                        <div>
+                                                            <span>{days}</span>
+                                                            <p>Days</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>{hours}</span>
+                                                            <p>HRS</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>{minutes}</span>
+                                                            <p>mins</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>{seconds}</span>
+                                                            <p>secs</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
 
                     </Swiper>
 

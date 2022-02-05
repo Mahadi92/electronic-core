@@ -42,24 +42,34 @@
         @media (max-width: 1024px){
             width: 100%;
         }
-
-        .product_card{
+        .product_card_container{
+            
+            @media (max-width: 1024px){
+                display: flex;
+            }
+            @media (max-width: 768px){
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .product_card{
             display: flex;
-
-            .product_card_content{
-                div{
-                    display: flex;
-                    align-items: center;
-                    p{
-                        font-weight: 600;
-                        color: $primary;
-                        padding-right: $em;
-                    }
-                    span{
-                        display: block;
-                        font-size: .9rem;
-                        color: gray;
-                        text-decoration: line-through;
+            
+                .product_card_content{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            font-weight: 600;
+                            color: $primary;
+                            padding-right: $em;
+                        }
+                        span{
+                            display: block;
+                            font-size: .9rem;
+                            color: gray;
+                            text-decoration: line-through;
+                        }
                     }
                 }
             }
@@ -78,7 +88,7 @@
             height: auto;
             border: 2px solid $primary;
             border-radius: .5rem;
-            padding: $md;
+            padding: $md $md 0 $md;
             position: relative;
             .ribbon{
                 position: absolute;
@@ -172,7 +182,6 @@
         }
         .content_box_price{
             display: flex;
-            padding-bottom: $em;
             @media (max-width: 768px){
                 justify-content: center;
             }
@@ -192,7 +201,7 @@
             }
         }
         p{
-            padding: $em 0;
+            padding: $sm 0;
         }
         .content_box_counter{
             display: flex;

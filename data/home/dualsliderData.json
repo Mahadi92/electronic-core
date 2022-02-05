@@ -1,0 +1,34 @@
+[
+    {
+        "img": "/static/images/img2.jpg",
+        "heading": "Frankie Sweatshirt",
+        "star": "5",
+        "currentPrice": "$50.00",
+        "oldPrice": "$60.00",
+        "paragraph": "Frankie Sweatshirt is your best friend at long afternoon stadium stints or winter trailside campsites. "
+    },
+    {
+        "img": "/static/images/img3.jpg",
+        "heading": "Mach Street Sweatshirt",
+        "star": "5",
+        "currentPrice": "$180.00",
+        "oldPrice": "$200.00",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fugit quaerat necessitatibus eos, dolorem ratione!"
+    },
+    {
+        "img": "/static/images/img4.jpg",
+        "heading": "Helios EverCool™ Tee",
+        "star": "5",
+        "currentPrice": "$100.00",
+        "oldPrice": "$150.00",
+        "paragraph": "The Helios EverCool™ Tee is your best friend at long afternoon stadium stints or winter trailside campsites."
+    },
+    {
+        "img": "/static/images/img1.webp",
+        "heading": "Arcu Vitae Imperdiet",
+        "star": "5",
+        "currentPrice": "$222.00",
+        "oldPrice": "$234.00",
+        "paragraph": "The Arcu Vitae Imperdiet is your best friend at long afternoon stadium stints or winter trailside campsites. The soft fleece fabric keeps you toasty as moisture-wicking technology kicks in when the sun comes out."
+    }
+]
