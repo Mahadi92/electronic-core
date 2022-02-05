@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import style from '../../styles/modules//dualDiv.module.scss';
+import style from '../../styles/modules//dualSlider.module.scss';
 import { BsFillStarFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 // Import Swiper React components
@@ -56,7 +56,7 @@ const DualSlider = () => {
     return (
         <div className={style.DualSlider_container}>
             <div className={style.left_div}>
-                <div className={style.title_div}>
+                <div className="title_div">
                     <p>New Product</p>
                 </div>
 
@@ -90,9 +90,9 @@ const DualSlider = () => {
                 </div>
             </div>
             <div className={style.right_div}>
-                <div className={style.title_div}>
+                <div className="title_div">
                     <p>Deal Of The Day</p>
-                    <div className={style.controller}>
+                    <div className="controller">
                         <button id="prevSlide"><FiChevronLeft /></button>
                         <span>|</span>
                         <button id="nextSlide"><FiChevronRight /></button>

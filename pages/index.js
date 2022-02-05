@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import DualDiv from '../components/common/DualDiv';
 import DualSlider from '../components/common/DualSlider';
 import HomeHeroSlider from '../components/sliders/HomeHeroSlider'
 import style from '../styles/modules/home.module.scss';
-;
 
 
 export default function Home() {
@@ -19,6 +19,10 @@ export default function Home() {
 
       <section className="container section">
         <DualSlider />
+      </section>
+
+      <section className={style.product_section}>
+        <DualDiv />
       </section>
 
     </div>
