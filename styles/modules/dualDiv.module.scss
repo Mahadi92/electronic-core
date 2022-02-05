@@ -113,6 +113,7 @@
         border: 1px solid $gray-dark;
         background: $white;
         border-radius: 5px;
+        display: flex;
         .left_div{
             width: 25%;
             position: relative;
@@ -131,15 +132,49 @@
     }
 }
 
+.product_card_container{
+    width: 100%;
+    .product_card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
 
-.product_card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        h3{
+            color: #4f4f4f;
+            font-weight: 600;
+        }
 
-    .product_card_price{
-        p{
-            
+        .product_card_price{
+            display: flex;
+            align-items: center;
+            p{
+                color: $primary;
+                font-weight: 700;
+                padding-right: $sm;
+            }
+            span{
+                display: block;
+                color: gray;
+                text-decoration: line-through;
+                font-size: 14px;
+            }
+        }
+        .product_card_btn{
+            padding-top: $sm;
+            display: flex;
+
+            .btn_add_to_cart{
+                display: block;
+                width: 70%;
+                background: none;
+                border: 1px solid $gray-dark;
+                padding: $em;
+            }
+            .btn_favorite{
+                display: block;
+                width: 30%;
+            }
         }
     }
 }

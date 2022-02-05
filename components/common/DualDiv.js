@@ -4,6 +4,17 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Image from 'next/image';
 import { AiOutlineHeart } from "react-icons/ai";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+
+// import required modules
+import { Grid, Pagination } from "swiper";
+
 const DualDiv = () => {
     return (
         <div className={style.dualDiv_container}>
@@ -30,22 +41,132 @@ const DualDiv = () => {
                     <Image src="/static/banners/side_banner1.jpg" alt="" layout="responsive" width="70%" height="100%" />
                 </div>
                 <div className={style.right_div}>
-                    <div className={style.product_card}>
-                        <div className={style.product_card_img}>
-                            <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
-                        </div>
-                        <div className={style.product_card_content}>
-                            <h3>Lorem, ipsum.</h3>
-                            <div className={style.product_card_price}>
-                                <p>$50.00</p>
-                                <span>$60.00</span>
-                            </div>
-                            <div className={style.product_card_but}>
-                                <button className={style.btn_add_to_cart}>Add To Cart</button>
-                                <button className={style.btn_add_to_favorite}><AiOutlineHeart /></button>
-                            </div>
-                        </div>
+
+                    <div className={style.product_card_container}>
+                        <Swiper
+                            slidesPerView={3}
+                            grid={{
+                                rows: 2,
+                            }}
+                            spaceBetween={30}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Grid, Pagination]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={style.product_card}>
+                                    <div className={style.product_card_img}>
+                                        <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
+                                    </div>
+                                    <div className={style.product_card_content}>
+                                        <h3>Lorem, ipsum.</h3>
+                                        <div className={style.product_card_price}>
+                                            <p>$50.00</p>
+                                            <span>$60.00</span>
+                                        </div>
+                                        <div className={style.product_card_btn}>
+                                            <button className={style.btn_add_to_cart}>Add To Cart</button>
+                                            <button className={style.btn_favorite}><AiOutlineHeart /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+
+                        </Swiper>
                     </div>
+
                 </div>
             </div>
 
