@@ -44,13 +44,13 @@ const DualDiv = () => {
 
                     <div className={style.product_card_container}>
                         <Swiper
-                            slidesPerView={3}
+                            slidesPerView={2}
                             grid={{
-                                rows: 2,
+                                rows: 2
                             }}
                             spaceBetween={30}
                             pagination={{
-                                clickable: true,
+                                clickable: true
                             }}
                             modules={[Grid, Pagination]}
                             className="mySwiper"
@@ -91,7 +91,7 @@ const DualDiv = () => {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            {/* <SwiperSlide>
                                 <div className={style.product_card}>
                                     <div className={style.product_card_img}>
                                         <Image src="/static/images/img2.jpg" alt="" width="150" height="150" />
@@ -162,7 +162,7 @@ const DualDiv = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </SwiperSlide>
+                            </SwiperSlide> */}
 
                         </Swiper>
                     </div>

@@ -133,12 +133,13 @@
 }
 
 .product_card_container{
-    width: 100%;
+    // width: 100%;
+    position: relative;
     .product_card{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background: red;
+        // justify-content: center;
+        // align-items: center;
+        // background: red;
 
         h3{
             color: #4f4f4f;
